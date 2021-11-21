@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
 }
 :root {
     --strechPro-font: "Stretch Pro", sans-serif;
@@ -40,6 +39,7 @@
 
 body {
     overflow-x: hidden;
+    font-family: var(--poppins-font);
 }
 
 /* 
@@ -228,6 +228,11 @@ body {
     font-weight: 400;
     color: var(--2nd-grey-color);
 }
+.divide,
+.divide_1,
+.divide_2 {
+    display: block;
+}
 .about_us_description_header {
     font-size: 18px;
     font-weight: 400;
@@ -287,6 +292,9 @@ body {
     .about_us_subtitle_header_divider {
         font-size: 34px;
     }
+    .divide_2 {
+        display: inline;
+    }
 }
 @media screen and (max-width: 992px) {
     .about_us_hero_section_img img {
@@ -335,6 +343,12 @@ body {
     .about_us_btn_explore {
         font-size: 18px;
     }
+    .divide_1 {
+        display: inline;
+    }
+    .divide_2 {
+        display: block;
+    }
 }
 @media screen and (max-width: 576px) {
     .about_us_hero_section,
@@ -349,7 +363,7 @@ body {
     }
     .about_us_subtitle_header,
     .about_us_subtitle_header_divider {
-        font-size: 29px;
+        font-size: 28px;
     }
     .about_us_description_header {
         font-size: 17px;
@@ -361,10 +375,17 @@ body {
     .about_us_hero_section_partnership {
         padding: 0 3%;
     }
+    .divide_2 {
+        display: inline;
+    }
 }
 @media screen and (max-width: 550px) {
     .about_us_hero_section_partnership {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .about_us_subtitle_header,
+    .about_us_subtitle_header_divider {
+        font-size: 24px;
     }
 }
 @media screen and (max-width: 480px) {
@@ -376,12 +397,37 @@ body {
     }
     .about_us_subtitle_header,
     .about_us_subtitle_header_divider {
-        font-size: 23px;
+        font-size: 18px;
     }
     .about_us_description_header {
         font-size: 16px;
     }
+    .about_us_btn_explore {
+        font-size: 16px;
+        width: 135px;
+        height: 50px;
+        padding: 13px 40px;
+    }
 }
+@media screen and (max-width: 360px) {
+    .about_us_submenu {
+        font-size: 16px;
+    }
+    .about_us_subtitle_header,
+    .about_us_subtitle_header_divider {
+        font-size: 17px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .about_us_submenu {
+        font-size: 16px;
+    }
+    .about_us_subtitle_header,
+    .about_us_subtitle_header_divider {
+        font-size: 20px;
+    }
+}
+
 /* 
     ABOUT US (HEADER) [END]
 */
@@ -554,9 +600,9 @@ body {
     padding: 6rem 0;
 }
 .about_us_intro_section_content,
-h4,
+.about_us_intro_section_content h4,
 .about_us_intro_section_content,
-span {
+.about_us_intro_section_content span {
     font-family: var(--poppins-font) !important;
     font-weight: 600 !important;
 }
@@ -565,9 +611,6 @@ span {
 }
 .text_blue {
     color: #2447f9 !important;
-}
-.divide {
-    display: block;
 }
 @media screen and (max-width: 768px) {
     .divide {
